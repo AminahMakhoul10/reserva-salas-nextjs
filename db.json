@@ -1,0 +1,68 @@
+{
+  "reservas": [
+    {
+      "id": 1,
+      "descricao": "Aula de Frameworks",
+      "solicitante": "José da Silva",
+      "sala": "Bloco A - Lab. de Informática 1",
+      "inicio": "2024-02-01T14:00:00",
+      "fim": "2024-02-01T16:00:00"
+    },
+    {
+      "id": 2,
+      "descricao": "Treinamento de Segurança",
+      "solicitante": "Gustavo Martins",
+      "sala": "Bloco B - Lab. de Quimica",
+      "inicio": "2024-02-10T10:30:00",
+      "fim": "2024-02-10T12:30:00"
+    },
+    {
+      "id": 3,
+      "descricao": "Reunião de Marketing",
+      "solicitante": "Patrícia Ferreira",
+      "sala": "Bloco C - Lab. de Edificações",
+      "inicio": "2024-02-20T09:00:00",
+      "fim": "2024-02-20T10:30:00"
+    },
+    {
+      "id": 4,
+      "descricao": "Entrevista de Emprego",
+      "solicitante": "Rafael Santos",
+      "sala": "Bloco D - Lab. de Eletromecanica",
+      "inicio": "2024-03-05T15:30:00",
+      "fim": "2024-03-05T16:30:00"
+    },
+    {
+      "id": 5,
+      "descricao": "Workshop de Desenvolvimento Pessoal",
+      "solicitante": "Laura Pereira",
+      "sala": "Bloco A - Auditorio",
+      "inicio": "2024-03-10T14:00:00",
+      "fim": "2024-03-10T16:00:00"
+    },
+    {
+      "id": 6,
+      "descricao": "Apresentação de Projetos de TI",
+      "solicitante": "Carlos Rodrigues",
+      "sala": "Bloco A - Sala 5- ADS",
+      "inicio": "2024-03-15T11:00:00",
+      "fim": "2024-03-15T12:30:00"
+    },
+    {
+      "id": 7,
+      "descricao": "Conferência de Vendas",
+      "solicitante": "Mariana Almeida",
+      "sala": "Bloco D - Sala 7- Arquitetura",
+      "inicio": "2024-03-20T09:30:00",
+      "fim": "2024-03-20T11:00:00"
+    },
+    {
+      "descricao": "FFesta",
+      "solicitante": "Aminah Makhoul",
+      "sala": "Bloco A - Auditorio",
+      "inicio": "2023-11-07T13:57",
+      "fim": "2023-11-08T15:59",
+      "id": 8
+    }
+  ]
+}
