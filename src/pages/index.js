@@ -3,6 +3,7 @@ import Cadastro from '@/components/Cadastro'
 import Label from '@/components/Label'
 
 import Head from 'next/head'
+import { ToastContainer } from 'react-toastify'
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Cabecalho/>
       <Cadastro/>
       <Label/>
+      <ToastContainer/>
       
      
     </>

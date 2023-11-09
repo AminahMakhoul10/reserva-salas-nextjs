@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import axios from 'axios';
 import { useState } from 'react';
-import { toast } from 'react-toastify';
+import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Input from '../Input';
 
@@ -41,6 +41,14 @@ export default function Cadastro() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const isEmptyField = Object.values(reserva).some(value => value === "")
+
+    if (isEmptyField) {
+      toast.error('Preencher todos os campos antes de prosseguir é obrigatório.');
+      return;
+    }
+
+
     if (!termo) {
       toast.error('Concorde com os termos antes de prosseguir.')
       return;
@@ -49,10 +57,10 @@ export default function Cadastro() {
     try {
       await axios.post('http://localhost:3001/reservas', reserva)
       limparReserva();
-      toast.success('Reserva realizada com sucesso!')
+      toast.success('Sala reservada com sucesso!')
     } catch (error) {
       console.error(error);
-      toast.error('Erro ao realizar reserva, por favor tente novamente mais tarde!')
+      toast.error('Não foi possivel realizar a reserva, por favor tente novamente!')
     }
   }
 
@@ -144,5 +152,6 @@ export default function Cadastro() {
         </div>
       </form>
     </div>
+
   )
 }
