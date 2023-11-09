@@ -54,7 +54,7 @@ export default function Cadastro() {
     }
 
     try {
-      await axios.post('http://localhost:3001/reservas', reserva)
+      await axios.post('http://localhost:3030/reservas', reserva)
       limparReserva();
       toast.success('Sala reservada com sucesso!')
     } catch (error) {
