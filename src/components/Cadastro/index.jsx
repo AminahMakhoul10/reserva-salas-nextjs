@@ -41,16 +41,15 @@ export default function Cadastro() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const isEmptyField = Object.values(reserva).some(value => value === "")
+    const isEmptyField = Object.values(reserva).some(value => value === "") //isso aq vai verificar se os campos estao vazios
 
-    if (isEmptyField) {
+    if (isEmptyField) { //isso aq vai tornar obrigatorio preencher todos os campos
       toast.error('Preencher todos os campos antes de prosseguir é obrigatório.');
       return;
     }
 
-
     if (!termo) {
-      toast.error('Concorde com os termos antes de prosseguir.')
+      toast.error('Concorde com os termos antes de reservar uma sala.')
       return;
     }
 
@@ -66,7 +65,7 @@ export default function Cadastro() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
+      <div className={styles.titulo}>
         <h1>Reservar sala</h1>
       </div>
       <form onSubmit={handleSubmit}>
@@ -146,8 +145,9 @@ export default function Cadastro() {
               Concordo com os termos
             </label>
           </div>
-          <div className={styles.containerbutton}>
-            <button className={styles.button} type='submit'>Reservar sala</button>
+          <div className={styles.botaotermos}>
+            <button className={styles.botaoreservar} type='submit'>
+              Reservar sala</button>
           </div>
         </div>
       </form>

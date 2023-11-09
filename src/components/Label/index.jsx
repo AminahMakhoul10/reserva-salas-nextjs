@@ -6,7 +6,7 @@ export default function Label() {
     const [reserva, setReserva] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3001/reservas')
+        axios.get('http://localhost:3030/reservas')
         .then(resultado => setReserva(resultado.data))
     }, [])
 
@@ -14,7 +14,6 @@ export default function Label() {
         if (!data) {
             return''
         }
-      
         const opcoesData = { day: '2-digit', month: '2-digit', year: 'numeric' };
         const opcoesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
         const dataFormatada = new Date(data).toLocaleDateString('pt-BR', opcoesData);
@@ -25,14 +24,14 @@ export default function Label() {
       return (
         <>
             <div>
-                <div className={styles.title}>
+                <div className={styles.titulo}>
                     <h1>Reservas realizadas</h1>
                 </div>
-                <div className={styles.container}>
+                <div className={styles.justificar}>
                     <table className={styles.table}>
                         <thead className={styles.thead}>
                             <tr>
-                                <th className={styles.descricao}>Descrição</th>
+                                <th>Descrição</th>
                                 <th>Solicitante</th>
                                 <th>Sala</th>
                                 <th>Início</th>
@@ -40,13 +39,13 @@ export default function Label() {
                             </tr>
                         </thead>
                         <tbody className={styles.tbody}>
-                            {reserva?.map(e => (
-                                <tr key={e.id} onClick={() => console.log(e)}>
-                                    <td>{e.descricao}</td>
-                                    <td>{e.solicitante}</td>
-                                    <td>{e.sala}</td>
-                                    <td>{formatarData(e.inicio)}</td>
-                                    <td>{formatarData(e.fim)}</td>
+                            {reserva?.map(a => (
+                                <tr key={a.id} onClick={() => console.log(a)}>
+                                    <td>{a.descricao}</td>
+                                    <td>{a.solicitante}</td>
+                                    <td>{a.sala}</td>
+                                    <td>{formatarData(a.inicio)}</td>
+                                    <td>{formatarData(a.fim)}</td>
                                 </tr>
                             ))}
                         </tbody>
