@@ -1,6 +1,6 @@
 .justificar{
-  margin-top: 5rem;
   text-align: center;
+  margin-top: -10px; 
   
 }
 
@@ -13,6 +13,7 @@
   justify-content: space-between;
   display: flex;
   margin-top: 1rem;
+  
 }
 
 .table {
@@ -37,5 +38,8 @@
 .tbody td {
   border: 1px solid black;
   padding: 8px;
+  
+  
+  
 }
  

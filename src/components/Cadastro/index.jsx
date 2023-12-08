@@ -1,3 +1,4 @@
+//A TABELA DE DE RESERVAS ENCONTRA-SE ABAIXO DO FORMULÁRIO DE RESERVA
 import styles from './styles.module.css';
 import axios from 'axios';
 import { useState } from 'react';
